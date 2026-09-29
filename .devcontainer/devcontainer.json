@@ -1,0 +1,17 @@
+{
+    "name": "Kaggle Local Environment",
+    "image": "gcr.io/kaggle-images/python",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-toolsai.jupyter",
+                "ms-python.python"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "mounts": [
+        // This securely persists your custom environments inside Docker across restarts
+        "source=kaggle-envs,target=/opt/conda/envs,type=volume"
+    ]
+}
